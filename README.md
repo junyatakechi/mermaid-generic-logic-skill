@@ -5,16 +5,20 @@ xychart の凡例・色・軸と題、gantt と timeline の色と並び、描�
 
 ## 必要なもの
 
-- [Claude Code](https://docs.claude.com/en/docs/claude-code/overview)
+- [Claude Code](https://docs.claude.com/en/docs/claude-code/overview) か [Codex](https://developers.openai.com/codex)
 - 図を描いて確かめるなら、ブラウザと Python（ローカルの HTTP サーバーに使う）
 
 ## インストール
+
+Claude Code では、次のようにクローンする。
 
 ```bash
 git clone https://github.com/junyatakechi/mermaid-generic-logic-skill.git ~/.claude/skills/mermaid-generic-logic-skill
 ```
 
-特定のプロジェクトだけで使うなら、`<プロジェクト>/.claude/skills/` の中でクローンする。
+Codex では、`~/.claude/skills/` を `~/.agents/skills/` に替えてクローンする。
+
+特定のプロジェクトだけで使うなら、`<プロジェクト>/.claude/skills/`（Codex は `<プロジェクト>/.agents/skills/`）の中でクローンする。
 
 ## セットアップ
 
@@ -23,7 +27,7 @@ git clone https://github.com/junyatakechi/mermaid-generic-logic-skill.git ~/.cla
 ## 使い方
 
 主に、アプリケーションスキルから呼ばれる。
-直接聞くときも、`/mermaid-generic-logic-skill` で名前を指名する。指名しないと、このスキルは読み込まれない。
+直接聞くときも、`/mermaid-generic-logic-skill` で名前を指名する。指名しないと、このスキルは読み込まれない。Codex では、例の `/` を `$` に替えて指名する。
 
 - 「/mermaid-generic-logic-skill xychart で1本の棒だけ色を変えるには？」
 - 「/mermaid-generic-logic-skill 横向きの棒グラフに凡例を出せる？」
